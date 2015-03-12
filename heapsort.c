@@ -34,3 +34,11 @@ void Max_Heapify(int *a , int n, int inode) {
     }
 
 }
+
+void Build_Max_Heap(int *a, int n) {
+
+    for (int i=PARENT(n); i>=0; i--) {
+        Max_Heapify(a, n, i);
+    }
+}
+
